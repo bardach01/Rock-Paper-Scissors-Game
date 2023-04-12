@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Score Board -->
+    <div class="score-board">
+        <p id="player-score">You: 0</p>
+        <p id="breakline"></p>
+        <p id="computer-score">Computer: 0</p>
+    </div>
+    <!-- Game Message Board -->
+    <div class="game-message-board">
+        <p id="game-message">You Tied!</p>
+    </div>
+    <!-- Competitors Message Board -->
+    <div class="competitors-message-board">
+        <p id="player-message">player message</p>
+        <p id="computer-message">computer message</p>
+    </div>
+    <!-- Tools -->
+    <div class="images-board">
+        <p id="winner">The Winner Is:</p>
+        <!-- Player Tools -->
+        <img id="rock-player-image" src="./images/rock.png" alt="rock">
+        <img id="rock-player-won-image" src="./images/rock-won.webp" alt="rock">
+        <img id="rock-player-lose-image" src="./images/rock-lose.png" alt="rock">
+        <img id="paper-player-won-image" src="./images/paper-won.png" alt="paper">
+        <img id="paper-player-lose-image" src="./images/paper-lose.png" alt="paper">
+        <img id="scissors-player-won-image" src="./images/scissors.png" alt="paper">
+        <img id="scissors-player-lose-image" src="./images/scissors-lose.png" alt="paper">
+        <!-- Computer Tools -->
+        <img id="rock-computer-image" src="./images/rock.png" alt="rock">
+        <img id="rock-computer-won-image" src="./images/rock-won.webp" alt="rock">
+        <img id="rock-computer-lose-image" src="./images/rock-lose.png" alt="rock">
+        <img id="paper-computer-won-image" src="./images/paper-won.png" alt="paper">
+        <img id="paper-computer-lose-image" src="./images/paper-lose.png" alt="paper">
+        <img id="scissors-computer-won-image" src="./images/scissors.png" alt="paper">
+        <img id="scissors-computer-lose-image" src="./images/scissors-lose.png" alt="paper">
+    </div>
+    <!-- Buttons Board -->
+    <div class="buttons-board">
+        <button id="rock-button" onclick="PlayerSelectionRock()">Rock</button>
+        <button id="paper-button" onclick="PlayerSelectionPaper()">Paper</button>
+        <button id="scissors-button" onclick="PlayerSelectionScissors()">Scissors</button>
+    </div>
+    <!-- Fire Work -->
+    <div id="firework"></div>
+    <div id="firework"></div>
+    <div id="firework"></div>
+</body>
+</html>
