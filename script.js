@@ -1,5 +1,5 @@
 let $PlayerSelection = 0;
-let $PlayerScore = 6;
+let $PlayerScore = 0;
 let $PlayerMessage = 0;
 let $ComputerSelection = 0;
 let $ComputerScore = 0;
@@ -26,9 +26,9 @@ let $ConfirmTimer;
 function BackButton(){
     document.getElementById("ip1").style.display = "block";
     document.getElementById("ip2").style.display = "none";
-    document.getElementById("next-button").style.visibility = "visible";
     document.getElementById("back-button").style.visibility = "hidden";
     document.getElementById("done-button").style.visibility = "hidden";
+    document.getElementById("next-button").style.visibility = "visible";
 }
 function NextButton(){
     document.getElementById("ip1").style.display = "none";
