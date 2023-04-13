@@ -105,7 +105,7 @@ function PlayerSelectionPaper(){
     reset();
     AnimationTool();
     $ClickOn = 1;
-    $AnimationTimer = setInterval(function(){PlayerSelectionRock()}, 300);
+    $AnimationTimer = setInterval(function(){PlayerSelectionPaper()}, 300);
     $ConfirmTimer = setInterval(function(){PlayerSelectionConfirm()}, 300);
     }
     if($Animation === 2){
@@ -120,7 +120,7 @@ function PlayerSelectionScissors(){
     reset();
     AnimationTool();
     $ClickOn = 1;
-    $AnimationTimer = setInterval(function(){PlayerSelectionRock()}, 300);
+    $AnimationTimer = setInterval(function(){PlayerSelectionScissors()}, 300);
     $ConfirmTimer = setInterval(function(){PlayerSelectionConfirm()}, 300);
     }
     if($Animation === 2){
@@ -168,6 +168,8 @@ function ComputerMessage(){
 }
 // Reset Function //
 function reset(){
+    $ComputerSelection = 0;
+    $PlayerSelection = 0;
     // Player Tools //
     document.getElementById("rock-player-image").style.display = "none";
     document.getElementById("rock-player-won-image").style.display = "none";
@@ -247,13 +249,15 @@ function CompetitorsSelection(){
         AnimationToolEnd();
         document.getElementById("rock-player-image").style.display = "block";
         document.getElementById("rock-computer-image").style.display = "block";
-    } else if($PlayerSelection === 2 && $ComputerSelection === 1){
+    } 
+    if($PlayerSelection === 2 && $ComputerSelection === 1){
         reset();
         MessageTied();
         AnimationToolEnd();
         document.getElementById("rock-player-image").style.display = "block";
         document.getElementById("rock-computer-image").style.display = "block";
-    } else if($PlayerSelection === 3 && $ComputerSelection === 2){
+    } 
+    if($PlayerSelection === 3 && $ComputerSelection === 2){
         reset();
         MessageTied();
         AnimationToolEnd();
@@ -328,7 +332,7 @@ function TheWinner(){
         document.getElementById("winner").style.color = "rgb(35, 211, 0)";
         document.getElementById("firework").style.display = "block";
         $NewRound++;
-        $Timer = setInterval(function(){NewRound()}, 3000);
+        $Timer = setInterval(function(){NewRound()}, 2000);
     }
     if($ComputerScore === 7){
         HideAll();
@@ -336,7 +340,7 @@ function TheWinner(){
         document.getElementById("winner").innerHTML = "The Winner Is The Computer!";
         document.getElementById("winner").style.color = "red";
         $NewRound++;
-        $Timer = setInterval(function(){NewRound()}, 3000);
+        $Timer = setInterval(function(){NewRound()}, 2000);
     }
 }
 // For New Round //
@@ -345,6 +349,8 @@ function NewRound(){
     $NewRound = 0;
     $PlayerScore = 0;
     $ComputerScore = 0;
+    $ComputerSelection = 0;
+    $PlayerSelection = 0;
     // Fire Work //
     document.getElementById("firework").style.display = "none";
     // Game Message //
