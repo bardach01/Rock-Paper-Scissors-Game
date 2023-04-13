@@ -13,6 +13,64 @@ body{
 button{
     cursor: pointer;
 }
+/* Instructions Board */
+#instructions-board{
+    position: absolute;
+    margin-top: 175px;
+    margin-left: 50px;
+    width: 600px;
+    height: 500px;
+    border: 0;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.76);
+    animation: instrudaction-board 0.5s;
+}
+#instructions-title{
+    margin-top: 20px;
+    animation: rainbow-title 0.5s infinite;
+}
+#instructions-board p{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding: 0px 30px;
+}
+#instructions-board #ip1{
+    display: block;
+}
+#instructions-board #ip2{
+    display: none;
+    margin-bottom: 40px;
+}
+#instructions-board p em{
+    color: rgb(0, 255, 200);
+}
+#instructions-board img{
+    margin-left: 34%;
+    width: 200px;
+    height: 200px;
+}
+.instructions-buttons{
+    display: flex;
+}
+#instructions-board button{
+    border: 0;
+    border-radius: 20px;
+    margin-top: 70px;
+    padding: 10px 30px;
+}
+#back-button{
+    margin-left: 28%;
+    visibility: hidden;
+}
+#done-button{
+    visibility: hidden;
+}
+#instructions-board button:hover{
+    transition: 0.3s;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.76);
+}
 /* Score Board */
 .score-board{
     display: flex;
@@ -76,6 +134,15 @@ button{
 }
 /* Player Tools */
 /* Rock */
+@keyframes tool-move {
+    0% { margin-top: 0px; }
+    5% { margin-top: 20px; }
+    10% { margin-top: 30px; }
+    15% { margin-top: 40px; }
+    20% { margin-top: 50px; }
+    30% { margin-top: 10px; }
+    40% { margin-top: 0px; }
+}
 #rock-player-image{
     margin-right: 50px;
     width: 300px;
@@ -182,8 +249,80 @@ button{
     background-color: rgb(43, 43, 43);
 }
 #rock-button{
-    margin-left: 20%;
+    margin-left: 17%;
 }
+/* Created By */
+.created-board{
+    margin-left: 41%;
+}
+.created-board #p1{
+    margin-bottom: 5px;
+    color: rgb(43, 43, 43);
+    font-size: 25px;
+}
+.created-board #p2{
+    margin-bottom: 5px;
+    color: white;
+    font-size: 25px;
+}
+.created-board a{
+    text-decoration: none;
+}
+.created-board #p2{
+    margin-bottom: 5px;
+}
+.created-board #p2:hover{
+    transition: 0.3s;
+    color: rgb(0, 255, 106);
+}
+/* instructions animations */
+@keyframes instrudaction-board {
+    from {margin-left: -500px;}
+    to {margin-left: 50px;}
+    0% { transform: translate(1px, 1px) rotate(0deg);  visibility: visible;}
+    10% { transform: translate(-1px, -2px) rotate(-1deg); opacity: 0;}
+    20% { transform: translate(-3px, 0px) rotate(1deg);}
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+}
+@keyframes rainbow-title{
+    100%,0%{
+        color: rgb(255,0,0);
+    }
+    8%{
+        color: rgb(255,127,0);
+    }
+    16%{
+        color: rgb(255,255,0);
+    }
+    25%{
+        color: rgb(127,255,0);
+    }
+    33%{
+        color: rgb(0,255,0);
+    }
+    41%{
+        color: rgb(0,255,127);
+    }
+    50%{
+        color: rgb(0,255,255);
+    }
+    58%{
+        color: rgb(0,127,255);
+    }
+    66%{
+        color: rgb(0,0,255);
+    }
+    75%{
+        color: rgb(127,0,255);
+    }
+    83%{
+        color: rgb(255,0,255);
+    }
+    91%{
+        color: rgb(255,0,127);
+    }
+}
+/* Fire Work */
 #firework{
     display: none;
 }
@@ -193,12 +332,6 @@ button{
     100% { width: var(--finalSize); opacity: 0; }
   }
   
-  /* @keyframes fireworkPseudo {
-    0% { transform: translate(-50%, -50%); width: var(--initialSize); opacity: 1; }
-    50% { width: 0.5vmin; opacity: 1; }
-    100% { width: var(--finalSize); opacity: 0; }
-  }
-   */
   #firework,
   #firework::before,
   #firework::after

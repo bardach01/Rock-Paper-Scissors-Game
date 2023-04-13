@@ -9,6 +9,25 @@
     <script src="script.js"></script>
 </head>
 <body>
+    <!-- Instructions -->
+    <div id="instructions-board">
+        <p id="instructions-title">Instructions:</p>
+        <img src="./images/rock-intruction.png" alt="rock">
+        <p id="ip1">A classic two-person game. Players start each round by saying, 
+            <em>“rock, paper, scissors, shoot!”</em> On “shoot,” each player holds 
+            out their fist for rock, flat hand for paper, or their index 
+            and middle finger for scissors. Rock crushes scissors, 
+            scissors cut paper, and paper covers rock. See who wins each round!
+        </p>
+        <p id="ip2">At this moment you will play against the computer, the first
+            one who gets <em>7 points</em> in his score is the winner.
+            So good luck and enjoy!
+        </p>
+        <div class="instructions-buttons"></div>
+        <button id="back-button" onclick="BackButton()">Back</button>
+        <button id="next-button" onclick="NextButton()">Next</button>
+        <button id="done-button" onclick="DoneButton()">Done</button>
+    </div>
     <!-- Score Board -->
     <div class="score-board">
         <p id="player-score">You: 0</p>
@@ -33,16 +52,16 @@
         <img id="rock-player-lose-image" src="./images/rock-lose.png" alt="rock">
         <img id="paper-player-won-image" src="./images/paper-won.png" alt="paper">
         <img id="paper-player-lose-image" src="./images/paper-lose.png" alt="paper">
-        <img id="scissors-player-won-image" src="./images/scissors.png" alt="paper">
-        <img id="scissors-player-lose-image" src="./images/scissors-lose.png" alt="paper">
+        <img id="scissors-player-won-image" src="./images/scissors.png" alt="scissors">
+        <img id="scissors-player-lose-image" src="./images/scissors-lose.png" alt="scissors">
         <!-- Computer Tools -->
         <img id="rock-computer-image" src="./images/rock.png" alt="rock">
         <img id="rock-computer-won-image" src="./images/rock-won.webp" alt="rock">
         <img id="rock-computer-lose-image" src="./images/rock-lose.png" alt="rock">
         <img id="paper-computer-won-image" src="./images/paper-won.png" alt="paper">
         <img id="paper-computer-lose-image" src="./images/paper-lose.png" alt="paper">
-        <img id="scissors-computer-won-image" src="./images/scissors.png" alt="paper">
-        <img id="scissors-computer-lose-image" src="./images/scissors-lose.png" alt="paper">
+        <img id="scissors-computer-won-image" src="./images/scissors.png" alt="scissors">
+        <img id="scissors-computer-lose-image" src="./images/scissors-lose.png" alt="scissors">
     </div>
     <!-- Buttons Board -->
     <div class="buttons-board">
@@ -54,5 +73,12 @@
     <div id="firework"></div>
     <div id="firework"></div>
     <div id="firework"></div>
+    <!-- Created By -->
+    <div class="created-board">
+        <p id="p1">Created By:</p>
+        <a href="https://github.com/bardach01?tab=repositories" target="blank">
+            <p id="p2"><i class="fa-brands fa-github"></i>bardach01</p>
+        </a>
+    </div>
 </body>
 </html>
