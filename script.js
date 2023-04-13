@@ -254,15 +254,15 @@ function CompetitorsSelection(){
         reset();
         MessageTied();
         AnimationToolEnd();
-        document.getElementById("rock-player-image").style.display = "block";
-        document.getElementById("rock-computer-image").style.display = "block";
+        document.getElementById("paper-player-lose-image").style.display = "block";
+        document.getElementById("paper-computer-lose-image").style.display = "block";
     } 
     if($PlayerSelection === 3 && $ComputerSelection === 2){
         reset();
         MessageTied();
         AnimationToolEnd();
-        document.getElementById("rock-player-image").style.display = "block";
-        document.getElementById("rock-computer-image").style.display = "block";
+        document.getElementById("scissors-player-lose-image").style.display = "block";
+        document.getElementById("scissors-computer-lose-image").style.display = "block";
     }
     // Player Won //
     if($PlayerSelection === 1 && $ComputerSelection === 2){
@@ -326,7 +326,6 @@ function CompetitorsSelection(){
 // The Winner //
 function TheWinner(){
     if($PlayerScore === 7){
-        HideAll();
         document.getElementById("winner").style.display = "block";
         document.getElementById("winner").innerHTML = "The Winner Is You!";
         document.getElementById("winner").style.color = "rgb(35, 211, 0)";
@@ -335,7 +334,6 @@ function TheWinner(){
         $Timer = setInterval(function(){NewRound()}, 2000);
     }
     if($ComputerScore === 7){
-        HideAll();
         document.getElementById("winner").style.display = "block";
         document.getElementById("winner").innerHTML = "The Winner Is The Computer!";
         document.getElementById("winner").style.color = "red";
