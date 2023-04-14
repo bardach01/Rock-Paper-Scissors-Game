@@ -57,7 +57,7 @@ function MessageWin(x,y){
 }
 // When The Player Tied //
 function MessageTied(){
-    console.log(`No One Won!`);
+    console.log(`You Tied!`);
     document.getElementById("game-message").style.visibility = "visible";
     document.getElementById("game-message").style.color = "white";
     document.getElementById("game-message").innerHTML = `You Tied!`;

@@ -8,7 +8,7 @@ body{
     margin: auto;
     width: max-content;
     height: 100vh;
-    overflow: hidden;
+    overflow: scroll;
 }
 button{
     cursor: pointer;
@@ -91,7 +91,7 @@ button{
     display: flex;
     background-color: rgb(31, 31, 31);
     justify-content: space-around;
-    margin-top: 50px;
+    margin-top: 10px;
     border-bottom: 5px solid rgb(26, 26, 26);
 }
 .score-board p{
@@ -468,3 +468,224 @@ button{
     animation-delay: -0.05s;
   }
   
+@media (max-width: 600px){
+    /* Instructions Board */
+#instructions-board{
+    position: absolute;
+    margin-top: 175px;
+    margin-left: 15px;
+    width: 330px;
+    height: 500px;
+}
+#instructions-title{
+    margin-top: 10px;
+}
+#instructions-board p{
+    font-size: 20px;
+}
+#instructions-board #ip1{
+    display: block;
+}
+#instructions-board #ip2{
+    display: none;
+    margin-bottom: 0px;
+}
+#instructions-board p em{
+    color: rgb(0, 255, 200);
+}
+#instructions-board img{
+    margin-left: 30%;
+    width: 150px;
+    height: 150px;
+}
+.instructions-buttons{
+    display: flex;
+}
+#instructions-board button{
+    margin-top: 20px;
+    padding: 10px 30px;
+}
+#back-button{
+    position: relative;
+    top: 130px;
+    margin-left: 10%;
+    visibility: hidden;
+}
+#done-button{
+    position: relative;
+    top: 130px;
+    visibility: hidden;
+}
+/* Winner Board */
+#winner{
+    position: absolute;
+    top: 320px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.76);
+    padding: 30px 0px;
+    width: 300px;
+    height: 25px;
+    border: 0px;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 28px;
+    display: none;
+}
+/* Score Board */
+.score-board{
+    margin-top: 0px;
+    width: 360px;
+}
+.score-board p{
+    padding: 10px 0px;
+}
+/* Game Message */
+.game-message-board{
+    width: 360px;
+    background-color: rgb(41, 41, 41);
+    padding: 30px 0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom: 5px solid rgb(26, 26, 26);
+}
+/* Competitors Message */
+.competitors-message-board{
+    padding: 30px 0px;
+    width: 360px;
+}
+.competitors-message-board p{
+    width: 180px;
+    padding: 20px 0px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(31, 31, 31);
+}
+/* Tools Board */
+.images-board{
+    display: flex;
+    height: 150px;
+    width: 360px;
+}
+/* Player Tools */
+/* Rock */
+#rock-player-image{
+    margin-left: 5px;
+    width: 150px;
+    height: 150px;
+}
+#rock-player-won-image{
+    margin-left: 5px;
+    width: 150px;
+    height: 150px;
+    display: none;
+}
+#rock-player-lose-image{
+    margin-left: 5px;
+    width: 150px;
+    height: 150px;
+    display: none;
+}
+/* Paper */
+#paper-player-won-image{
+    margin-left: 5px;
+    width: 150px;
+    height: 150px;
+    display: none;
+}
+#paper-player-lose-image{
+    margin-left: 5px;
+    width: 150px;
+    height: 150px;
+    display: none;
+}
+/* Scissors */
+#scissors-player-won-image{
+    margin-left: 5px;
+    width: 150px;
+    height: 150px;
+    display: none;
+}
+#scissors-player-lose-image{
+    margin-left: 5px;
+    width: 150px;
+    height: 150px;
+    display: none;
+}
+/* Computer Tools */
+/* Rock */
+#rock-computer-image{
+    margin-left: 5px;
+    width: 150px;
+    height: 150px;
+}
+#rock-computer-won-image{
+    margin-left: 5px;
+    width: 150px;
+    height: 150px;
+    display: none;
+}
+#rock-computer-lose-image{
+    margin-left: 5px;
+    width: 150px;
+    height: 150px;
+    display: none;
+}
+/* Paper */
+#paper-computer-won-image{
+    margin-left: 5px;
+    width: 150px;
+    height: 150px;
+    display: none;
+}
+#paper-computer-lose-image{
+    margin-left: 5px;
+    width: 150px;
+    height: 150px;
+    display: none;
+}
+/* Scissors */
+#scissors-computer-won-image{
+    margin-left: 5px;
+    width: 150px;
+    height: 150px;
+    display: none;
+}
+#scissors-computer-lose-image{
+    margin-left: 5px;
+    width: 150px;
+    height: 150px;
+    display: none;
+}
+/* Buttons */
+.buttons-board{
+    padding: 35px 0px;
+}
+.buttons-board button{
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    background-color: rgb(31, 31, 31);
+    width: 100px;
+}
+.buttons-board button:hover{
+    transition: 0.3s;
+    background-color: rgb(43, 43, 43);
+}
+#rock-button{
+    margin-left: 8%;
+}
+/* Created By */
+.created-board{
+    margin-left: 37%;
+}
+.created-board #p1{
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.created-board #p2{
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+}
